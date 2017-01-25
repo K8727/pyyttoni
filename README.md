@@ -1,2 +1,2 @@
 # pyyttoni
-Script programming
+Script programming kurssin harkat
