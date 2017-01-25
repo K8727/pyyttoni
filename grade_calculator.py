@@ -18,10 +18,7 @@
 def grade_calculator(exam,demo):
 	summa=(exam+demo)
 	grade=0
-	if summa>36:
-		print("Cheater!")
-		return
-	elif summa>=33:
+	if summa>=33:
 		grade=5
 	elif summa>=29:
 		grade=4
