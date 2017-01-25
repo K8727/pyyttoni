@@ -18,7 +18,10 @@
 def grade_calculator(exam,demo):
 	summa=(exam+demo)
 	grade=0
-	if summa>=33:
+	if summa>36:
+		print("Cheater!")
+		return
+	elif summa>=33:
 		grade=5
 	elif summa>=29:
 		grade=4
@@ -31,5 +34,29 @@ def grade_calculator(exam,demo):
 	else :
 		grade=0
 	print("With total points %d, the final grade was %d"%(summa,grade))
+exam=0 
+demo=0
+#kysytään käyttäjältä pisteet
+#ei tarkisteta
+while True:
+	try:
+		exam=int(input("How many exam points did you get (0-24)?"))
+		if exam<=0 or exam>24: 
+			print("epäkelpo luku")
+			continue
+		break
+	except ValueError:
+		print("Anna kokonaisluku")
 
-grade_calculator(21,6)
+while True:
+	try:
+		demo=int(input("How many demo points did you get (0-12)?"))
+		if demo<=0 or demo>12: 
+			print("epäkelpo luku")
+			continue
+		break
+	except ValueError:
+		print("Anna kokonaisluku")
+
+grade_calculator(exam,demo)
+#grade_calculator(21,6)
